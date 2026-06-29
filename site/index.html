@@ -1,8 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catholic Parishes of Upper Kittitas County | St. John the Baptist &amp; Immaculate Conception</title>
+<meta name="description" content="St. John the Baptist in Cle Elum and Immaculate Conception in Roslyn — Mass times, sacraments, and parish life in the Cascade foothills. Welcome home.">
+<link rel="icon" type="image/svg+xml" href="assets/logos/parish-fullcolor_circle-icon.svg">
+<!-- Open Graph -->
+<meta property="og:title" content="Catholic Parishes of Upper Kittitas County | St. John the Baptist &amp; Immaculate Conception">
+<meta property="og:description" content="St. John the Baptist in Cle Elum and Immaculate Conception in Roslyn — Mass times, sacraments, and parish life in the Cascade foothills. Welcome home.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/logos/parish-fullcolor_primary-lockup.svg">
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Catholic Parishes of Upper Kittitas County | St. John the Baptist &amp; Immaculate Conception">
+<meta name="twitter:description" content="St. John the Baptist in Cle Elum and Immaculate Conception in Roslyn — Mass times, sacraments, and parish life in the Cascade foothills. Welcome home.">
+<meta name="twitter:image" content="assets/logos/parish-fullcolor_primary-lockup.svg">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -86,7 +99,7 @@
         </p>
         <div class="hero__ctas">
           <button class="btn btn--on-navy" onClick="{{ goMass }}">See Mass times</button>
-          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goNew }}">New here?</button>
+          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" style-hover="background:rgba(250,248,245,0.16);color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goNew }}">New here?</button>
         </div>
       </div>
     </section>
@@ -178,7 +191,7 @@
         </p>
         <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
           <button class="btn btn--on-navy" onClick="{{ goGiving }}">Give online</button>
-          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goNew }}">New here?</button>
+          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" style-hover="background:rgba(250,248,245,0.16);color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goNew }}">New here?</button>
         </div>
       </div>
     </section>
@@ -470,7 +483,7 @@
         </p>
         <div class="hero__ctas">
           <a class="btn btn--on-navy" href="https://giving.parishsoft.com/App/Form/dd200bd9-02ce-473a-8921-004501ab1a85" target="_blank" rel="noopener">Give to this parish</a>
-          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goHome }}">Both parishes</button>
+          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" style-hover="background:rgba(250,248,245,0.16);color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goHome }}">Both parishes</button>
         </div>
       </div>
     </section>
@@ -582,7 +595,7 @@
         </p>
         <div class="hero__ctas">
           <a class="btn btn--on-navy" href="https://giving.parishsoft.com/App/Form/6063fea9-d6fc-486a-bed3-1150431d3666" target="_blank" rel="noopener">Give to this parish</a>
-          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goHome }}">Both parishes</button>
+          <button class="btn btn--secondary" style="color:var(--color-warm-white);border-color:var(--color-warm-white)" style-hover="background:rgba(250,248,245,0.16);color:var(--color-warm-white);border-color:var(--color-warm-white)" onClick="{{ goHome }}">Both parishes</button>
         </div>
       </div>
     </section>
@@ -1098,13 +1111,79 @@ class Component extends DCLogic {
 
   componentDidMount() {
     this._validPages = ['home','new','mass','about','sjb','ic','sacraments','formation','giving','watch','contact','prayer'];
+    const SITE = 'Catholic Parishes of Upper Kittitas County';
+    this._pageMeta = {
+      home: {
+        title: SITE + ' | St. John the Baptist \u0026 Immaculate Conception',
+        desc: 'St. John the Baptist in Cle Elum and Immaculate Conception in Roslyn — Mass times, sacraments, and parish life in the Cascade foothills. Welcome home.',
+      },
+      new: {
+        title: 'New Here? | ' + SITE,
+        desc: 'Coming for the first time? What to expect at Mass, how to register, and how to connect with our two parishes in Cle Elum and Roslyn. Come as you are.',
+      },
+      mass: {
+        title: 'Mass Times | ' + SITE,
+        desc: 'Sunday and daily Mass, confession, and adoration times for St. John the Baptist in Cle Elum and Immaculate Conception in Roslyn. All are welcome.',
+      },
+      about: {
+        title: 'Our Parishes | ' + SITE,
+        desc: 'The story of two historic mountain parishes — St. John the Baptist in Cle Elum and Immaculate Conception in Roslyn. One pastor, one faith, one altar.',
+      },
+      sjb: {
+        title: 'St. John the Baptist, Cle Elum | ' + SITE,
+        desc: 'St. John the Baptist in Cle Elum — Mass and confession times, our history since 1902, and how to share in the life of our parish in the valley.',
+      },
+      ic: {
+        title: 'Immaculate Conception, Roslyn | ' + SITE,
+        desc: 'Immaculate Conception in Roslyn — Mass times, our story since 1887, and the lovingly restored historic church in the Cascade foothills. Welcome home.',
+      },
+      sacraments: {
+        title: 'Sacraments | ' + SITE,
+        desc: 'Baptism, First Communion, Confirmation, Reconciliation, marriage, and more — the grace of the sacraments across our two Upper Kittitas parishes.',
+      },
+      formation: {
+        title: 'Faith Formation | ' + SITE,
+        desc: 'Religious education for children, OCIA for adults exploring the faith, and free FORMED streaming — growing in faith together at every age.',
+      },
+      giving: {
+        title: 'Giving | ' + SITE,
+        desc: 'Support St. John the Baptist and Immaculate Conception with a secure one-time or recurring gift, keeping two historic churches warm and open.',
+      },
+      watch: {
+        title: 'Watch Mass Live | ' + SITE,
+        desc: 'Join Sunday Mass online, livestreamed each week from Cle Elum and Roslyn. Pray with us from home, or revisit a recent Mass any time.',
+      },
+      contact: {
+        title: 'Contact | ' + SITE,
+        desc: 'Reach the parish office serving both St. John the Baptist and Immaculate Conception — phone, email, office hours, and our parish staff.',
+      },
+      prayer: {
+        title: 'Prayer Requests | ' + SITE,
+        desc: "Share an intention and our community will hold it in prayer. Whatever you're carrying, you don't carry it alone. All requests kept confidential.",
+      },
+    };
     this._onHash = () => {
       const h = (window.location.hash || '').replace(/^#\/?/, '');
-      if (this._validPages.indexOf(h) !== -1) this.setState({ page: h, menuOpen: false });
-      else if (!h) this.setState({ page: 'home', menuOpen: false });
+      if (this._validPages.indexOf(h) !== -1) { this.setState({ page: h, menuOpen: false }); this.applyMeta(h); }
+      else if (!h) { this.setState({ page: 'home', menuOpen: false }); this.applyMeta('home'); }
     };
     window.addEventListener('hashchange', this._onHash);
     this._onHash();
+  }
+
+  applyMeta(page) {
+    if (typeof document === 'undefined' || !this._pageMeta) return;
+    const meta = this._pageMeta[page || this.state.page] || this._pageMeta.home;
+    document.title = meta.title;
+    const set = (sel, val) => {
+      const el = document.querySelector(sel);
+      if (el) el.setAttribute('content', val);
+    };
+    set('meta[name="description"]', meta.desc);
+    set('meta[property="og:title"]', meta.title);
+    set('meta[property="og:description"]', meta.desc);
+    set('meta[name="twitter:title"]', meta.title);
+    set('meta[name="twitter:description"]', meta.desc);
   }
 
   componentWillUnmount() {
@@ -1117,6 +1196,7 @@ class Component extends DCLogic {
       if (window.scrollTo) window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
     }
     this.setState({ page: id, menuOpen: false });
+    this.applyMeta(id);
   }
 
   navLinks() {

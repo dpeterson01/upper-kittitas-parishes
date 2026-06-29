@@ -32,19 +32,23 @@ This design system was built from these materials. Filed here so the system can 
 ```
 .
 ├── README.md                  ← this file
-├── SKILL.md                   ← Claude / agent skill entrypoint
 ├── colors_and_type.css        ← color + type + spacing tokens, semantic styles
+├── _ds_manifest.json          ← machine-readable manifest of the system
+├── _ds_bundle.js              ← runtime bundle used by the rendered site
+├── _adherence.oxlintrc.json   ← lint rules that enforce token usage
 ├── fonts/                     ← Cormorant SC, Source Sans 3, Source Serif 4 (.ttf, self-hosted)
 ├── assets/
-│   ├── logos/                 ← every approved SVG logo variant
-│   └── parish-brand-assets.pdf
+│   └── logos/                 ← every approved SVG logo variant
 ├── preview/                   ← cards rendered in the Design System tab
-├── ui_kits/
-│   └── parish_website/        ← high-fidelity recreation of the parish website
-└── slides/                    ← 16:9 slide templates (title, scripture, mass times, …)
+└── ui_kits/                   ← per-surface kits
+    ├── parish_website/        ← high-fidelity recreation of the parish website
+    ├── parish_bulletin/       ← bulletin layout styles
+    └── parish_newsletter/     ← newsletter layout styles
 ```
 
-A parallel `brand/` mount holds the original AI/PDF source files and large raster exports. Pull from there when you need print masters or PNGs at specific pixel sizes.
+The original AI/PDF source masters, print files, and large raster exports live in the
+separate private initiative repo (`dpeterson01/catholic-church`) under `assets/brand/`.
+Pull from there when you need print masters or PNGs at specific pixel sizes.
 
 ---
 
@@ -237,21 +241,23 @@ If we need a "ministry icon" set (Liturgy, Music, Faith Formation, Outreach, Ste
 2. Use `var(--color-navy)`, `var(--font-serif)`, etc — never raw hex / font names.
 3. Pull a logo from `assets/logos/` rather than embedding inline SVG.
 4. For UI components, copy from `ui_kits/parish_website/`.
-5. To brief an agent (Claude or otherwise) on this brand, point it at `SKILL.md`.
+5. To brief an agent (Claude or otherwise) on this brand, point it at this `README.md`.
 
 ## Index — what each file is for
 
 | File / folder | What's in it |
 | --- | --- |
 | `README.md` | This file — brand context, voice, visual rules, iconography, caveats. |
-| `SKILL.md` | Agent skill entrypoint. Compatible with Claude Code's Agent Skills format. |
 | `colors_and_type.css` | All design tokens (color, type, spacing, radii, shadow, motion) + base semantic styles. The source of truth — never re-define hex codes elsewhere. |
+| `_ds_manifest.json` | Machine-readable manifest describing the system's tokens and assets. |
+| `_ds_bundle.js` | Runtime bundle the rendered site loads to apply the system. |
 | `fonts/` | Cormorant SC (5 weights), Source Sans 3 (16 weight/italic combos), and Source Serif 4 (16 weight/italic combos) — all self-hosted as static TTF. |
 | `assets/logos/` | Full SVG logo system: primary lockup, stacked lockup, circle icon, SJB lamb, IC Marian M, cross, combined shield, individual shields — each in `fullcolor` / `mono-navy` / `mono-white` / `reverse` variants where applicable. |
-| `assets/parish-brand-assets.pdf` | Print-ready brand asset reference sheet from the parish brand book. |
 | `preview/` | 29 design-system specimen cards rendered in the Design System tab — colors, type, spacing, brand marks, and components. |
 | `preview/_card.css` | Shared card styles. Imports `colors_and_type.css`. |
-| `ui_kits/parish_website/` | High-fidelity React recreation of the parish marketing website — `Home`, `Mass Times`, `About`, `Bulletin`, `Contact`. Open `index.html` and click the top nav. |
+| `ui_kits/parish_website/` | High-fidelity recreation of the parish marketing website — `Home`, `Mass Times`, `About`, `Bulletin`, `Contact`. |
+| `ui_kits/parish_bulletin/` | Bulletin layout styles for the weekly printed/PDF bulletin. |
+| `ui_kits/parish_newsletter/` | Newsletter layout styles. |
 
 ## Caveats and open items
 
