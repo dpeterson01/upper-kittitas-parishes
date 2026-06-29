@@ -1,0 +1,5 @@
+.DS_Store
+*.thumbnail
+.thumbnail
+node_modules/
+Thumbs.db
