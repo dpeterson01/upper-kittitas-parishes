@@ -1,8 +1,48 @@
+---
+# Machine-readable canonical parish data. This frontmatter is the single source
+# of truth consumed by the bulletin pipeline (ukc-bulletin: render/sync-parish-facts.mjs
+# regenerates parish-config.yaml from it). Keep the prose below in sync with these values.
+public_name: Catholic Parishes of Upper Kittitas County
+tagline: Two places. One faith. One future in Christ.
+diocese: Diocese of Yakima
+bishop: Bishop Joseph Tyson
+website: ukccatholic.org
+office:
+  phone: "(509) 674-2531"
+  email: parish@ukccatholic.org
+  hours: "Tue/Thu 10 a.m.–3 p.m. · Wed/Fri 10 a.m.–4 p.m. · Mon/Sat/Sun closed"
+parishes:
+  - { name: St. John the Baptist, short: SJB, city: Cle Elum, address: "303 W. 2nd St., Cle Elum, WA 98922" }
+  - { name: Immaculate Conception, short: IC, city: Roslyn, address: "211 N. B St., Roslyn, WA 98941" }
+clergy:
+  pastor: Very Rev. Francisco Higuera
+  pastor_email: fr.higuera@yakimadiocese.org
+  pastor_ext: "5"
+mass_times:
+  - { time: "Sat 5:00 PM", where: "Vigil · St. John the Baptist" }
+  - { time: "Sun 8:00 AM", where: "Immaculate Conception · Roslyn" }
+  - { time: "Sun 10:00 AM", where: "St. John the Baptist · Cle Elum" }
+  - { time: "Tue 8:00 AM", where: "St. John the Baptist" }
+  - { time: "Wed 6:00 PM", where: "Immaculate Conception" }
+  - { time: "Thu 8:00 AM", where: "St. John the Baptist" }
+  - { time: "Fri 8:00 AM", where: "Immaculate Conception" }
+confession: "Sat 3:30–4:30 PM · SJB, or by appointment (Fr. Higuera, ext. 5)"
+adoration: "1st Friday 8:30 AM–12:00 PM · alternating churches (check calendar)"
+giving:
+  - { parish: SJB, url: "giving.parishsoft.com/App/Form/dd200bd9-02ce-473a-8921-004501ab1a85" }
+  - { parish: IC, url: "giving.parishsoft.com/App/Form/6063fea9-d6fc-486a-bed3-1150431d3666" }
+formed:
+  signup_url: "https://formed.org/signup"
+  zip: "98922"
+  parish: St. John the Baptist
+---
+
 # Parish Facts — Canonical Source of Truth
 
 > Confirmed by the user on 2026-06-28. These values OVERRIDE both the
 > design-system website kit's placeholder data and any conflicting values in the
 > mounted `catholic_church/` resource. Use these for the website build.
+> The YAML frontmatter above is the machine-readable canonical copy — keep this prose in sync with it.
 
 ## Naming
 - **Public-facing umbrella name:** **Catholic Parishes of Upper Kittitas County**
