@@ -4,5 +4,9 @@
 node_modules/
 Thumbs.db
 
+# Secrets / local environment (e.g. render/.env holds BREVO_API_KEY)
+.env
+.env.*
+
 # Generated weekly render outputs (the issues/<date>.json source is kept)
 issues/*/
