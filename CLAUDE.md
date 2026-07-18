@@ -26,7 +26,7 @@ When the user says a new export is in `~/Downloads`:
 
 ## Deploy
 GitHub Pages serves `site/` via `.github/workflows/deploy-pages.yml` on every push to
-`main`. Live: https://dpeterson01.github.io/upper-kittitas-parishes/
+`main`. Live: https://dpeterson01.github.io/ukc-website/
 
 ## Verify a deploy
 `gh run list --limit 1` for status, then curl the live URL and a `.woff2` font (expect

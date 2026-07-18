@@ -10,7 +10,7 @@ The website and shared brand identity for two Catholic parishes in the Cascade f
 ## Repository layout
 
 ```
-upper-kittitas-parishes/
+ukc-website/
 ├── site/             ← the deployable static website (this is what GitHub Pages serves)
 ├── design-system/    ← the reusable brand foundation: tokens, fonts, logos, UI kits, brand docs
 └── source/           ← the editable Claude Design source (.dc.html, parish facts, uploads)

@@ -47,7 +47,7 @@ This design system was built from these materials. Filed here so the system can 
 ```
 
 The original AI/PDF source masters, print files, and large raster exports live in the
-separate private initiative repo (`dpeterson01/catholic-church`) under `assets/brand/`.
+separate private initiative repo (`dpeterson01/ukc-data`) under `assets/brand/`.
 Pull from there when you need print masters or PNGs at specific pixel sizes.
 
 ---
