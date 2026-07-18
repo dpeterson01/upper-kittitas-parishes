@@ -19,13 +19,13 @@ clergy:
   pastor_email: fr.higuera@yakimadiocese.org
   pastor_ext: "5"
 mass_times:
-  - { time: "Sat 5:00 PM", where: "Vigil · St. John the Baptist" }
   - { time: "Sun 8:00 AM", where: "Immaculate Conception · Roslyn" }
   - { time: "Sun 10:00 AM", where: "St. John the Baptist · Cle Elum" }
   - { time: "Tue 8:00 AM", where: "St. John the Baptist" }
   - { time: "Wed 6:00 PM", where: "Immaculate Conception" }
   - { time: "Thu 8:00 AM", where: "St. John the Baptist" }
   - { time: "Fri 8:00 AM", where: "Immaculate Conception" }
+  - { time: "Sat 5:00 PM", where: "Vigil · St. John the Baptist" }
 confession: "Sat 3:30–4:30 PM · SJB, or by appointment (Fr. Higuera, ext. 5)"
 adoration: "1st Friday 8:30 AM–12:00 PM · alternating churches (check calendar)"
 giving:
